@@ -1,0 +1,96 @@
+{% set leftMenu = [
+    {
+        "link": "#",
+        "title": "Берего-укрепление"
+    },
+    {
+        "link": "#",
+        "title": "Укрепление откосов"
+    },
+    {
+        "link": "#",
+        "title": "Искусственные пруды"
+    },
+    {
+        "link": "#",
+        "title": "Террасирование участка"
+    },
+    {
+        "link": "#",
+        "title": "Экопарковки и дорожки"
+    },
+    {
+        "link": "#",
+        "title": "Террасирование участка"
+    },
+    {
+        "link": "#",
+        "title": "Экопарковки и дорожки"
+    },
+    {
+        "link": "#",
+        "title": "Водолазные работы"
+    },
+    {
+        "link": "#",
+        "title": "Слипы для катеров и яхт"
+    },
+    {
+        "link": "#",
+        "title": "Заборы и ограждения"
+    },
+    {
+        "link": "#",
+        "title": "Гидроизоляция"
+    }
+]%}
+
+{% set menu = [
+    {
+        "link": "#",
+        "title": "о компании"
+    },
+    {
+        "link": "#",
+        "title": "услуги"
+    },
+    {
+        "link": "#",
+        "title": "стоимость работы"
+    },
+    {
+        "link": "#",
+        "title": "контакты"
+    }
+]%}
+
+<div class="header">
+    <div class="container header__container">
+        <div class="header__contact">
+            <div>
+                <a href="tel:80000000000" class="header__phone">8 495 227 07 55</a>
+            </div>
+            <a href="#" class="header__call">Позвонить мне</a>
+        </div>
+        <div class="header__left-menu">
+            <a href="/" class="logo">
+                <img src="./images/logo.png" alt="geoliga" />
+            </a>
+            <ul class="left-menu">
+                {% for item in leftMenu %}
+                    <li class="left-menu__item">
+                        <a href="{{ item.link }}" class="left-menu__link">{{ item.title }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <ul class="menu header__menu">
+            {% for item in menu %}
+                <li class="menu__item">
+                    <a class="menu__link" href="{{ item.link }}">{{ item.title }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+        
+    </div>
+</div>

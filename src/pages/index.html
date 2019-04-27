@@ -1,0 +1,16 @@
+{% extends "base/base.html" %}
+
+{% block title %}Главная{% endblock %}
+
+{% block content %}
+	{% include 'carousel/carousel.html' %}
+	{% include 'info/info.html' %}
+	{% include 'objects/objects.html' %}
+	{% include 'services/services.html' %}
+	{% include 'information/information.html' %}
+{% endblock %}
+
+{% block script %}
+	<script type="text/javascript" src="../js/slick/slick/slick.min.js"></script>
+    <script type="text/javascript" src="../js/fancybox/fancybox.js"></script>
+{% endblock %}

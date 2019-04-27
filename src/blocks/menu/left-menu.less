@@ -1,0 +1,32 @@
+.left-menu{
+	list-style: none;
+	margin: 0;
+	line-height: 1.2;
+	padding-left: 30px;
+	max-height: 470px;
+	overflow-x: hidden;
+	overflow-y: auto;
+	&__item{
+		margin: 20px 0;
+	}
+	&__link{
+		text-decoration: none;
+		color: #875317;
+		position: relative;
+
+		&:hover{
+			color: #af9147;
+
+			&:before{
+				content: "";
+				width: 5px;
+				height: 5px;
+				border-radius: 50%;
+				background: #ba984a;
+				position: absolute;
+				left: -18px;
+				top: 5px;
+			}
+		}
+	}
+}

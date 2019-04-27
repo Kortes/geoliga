@@ -1,0 +1,26 @@
+{% set fancy = [
+    {
+        "image": "./images/slide.png", 
+        "text": "Укрепление береговой линии",
+        "id": "fancy1"
+    },
+    {
+        "image": "./images/promo.jpg", 
+        "text": "Укрепление береговой линии",
+        "id": "fancy2"
+    },
+    {
+        "image": "./images/carousel1.jpg", 
+        "text": "Укрепление береговой линии",
+        "id": "fancy3"
+    }
+]%}
+
+<div class="fancy">
+	{% for item in fancy %}
+	    <div class="fancy__item" id="{{ item.id }}">
+	        <img src="{{ item.image }}" alt="">
+	        <div class="fancy__text">{{ item.text }}</div>
+	    </div>
+    {% endfor %}
+</div>

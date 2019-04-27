@@ -1,0 +1,47 @@
+{% set services = [
+    {
+        "image": "./images/services1.jpg",
+        "big": "./images/carousel1.jpg",
+        "title": "Берегоукрепление",
+        "text": "Существует несколько основных методик и решений, для реализации которых применяются влагостойкие и высокопрочные материалы, среди которых сваи Существует несколько основных методик и решений, для реализации которых применяются влагостойкие и высокопрочные материалы, среди которых сваи",
+        "id": "fancy1"
+    },
+    {
+        "image": "./images/services2.jpg",
+        "big": "./images/carousel2.jpg",
+        "title": "Укрепление склона",
+        "text": "Когда вы приобретаете земельный участок с домом, то не всегда он оправдывает ваши ожидания и соответствует вашим мечтам. Например, на территории может Когда вы приобретаете земельный участок с домом, то не всегда он оправдывает ваши ожидания и соответствует вашим мечтам.",
+        "id": "fancy2",
+        "position": "right"
+    },
+    {
+        "image": "./images/services3.jpg",
+        "big": "./images/carousel3.jpg",
+        "title": "Искусственные пруды",
+        "text": "Когда вы приобретаете земельный участок с домом, то не всегда он оправдывает ваши ожидания и соответствует вашим мечтам.",
+        "id": "fancy3"
+    }
+]%}
+
+<div class="services">
+    <div class="container services__container">
+        {% for item in services %}
+            <div class="services__item services__item_bg_{{ loop.index }}{% if item.position %} services__item_image_{{ item.position }}{% endif %}">
+                <div class="services__image">
+                    <a href="{{ item.big }}" rel="group" class="services__zoom">
+                        <img src="{{ item.image }}" alt="{{ item.title }}" class="services__img" >
+                    </a>
+                </div>
+                <div class="services__content">
+                    <h3 class="services__title">{{ item.title }}</h3>
+                    <p class="services__text">
+                        {{ item.text }}
+                    </p>
+                    <div class="services__bottom">
+                        <a href="#{{ item.id }}" class="services__link">читать подробнее</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>

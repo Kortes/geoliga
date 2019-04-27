@@ -1,0 +1,69 @@
+@import "vars";
+
+html,
+body{
+	background: @bg;
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	color: @text;
+	font: 15px/2 'Museo', Arial, sans-serif;
+}
+h1, h2, h3, h4, h5, h6{
+	font-family: 'FuturaPT';
+	font-weight: normal;
+	margin: 0;
+}
+.container{
+	margin: 0 auto;
+	width: @width;
+	padding: 0 20px;
+}
+.page{
+	&__wrapper{
+		min-height: 100%;
+	}
+	&__footer{
+		height: 320px;
+	}
+}
+.logo{
+	display: block;
+	padding: 0 15px 15px;
+	border-bottom: 3px double @line;
+}
+.text{
+	p{
+		margin: 0 0 2em;
+	}
+	ul{
+		margin: 0 0 2em;
+		padding-left: 50px;
+		list-style: none;
+		font-weight: bold;
+		color: #6c5b43;
+		font-size: 16px;
+	}
+	li{
+		margin: 1em 0;
+		position: relative;
+
+		&:before{
+			content: "";
+			position: absolute;
+			left: -50px;
+			top: 3px;
+			width: 21px;
+			height: 25px;
+			background: url(../images/li.png) no-repeat;
+		}
+	}
+}
+.fancy{
+	display: none;
+
+	&__text{
+		color: @text;
+		font-weight: bold;
+	}
+}

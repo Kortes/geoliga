@@ -1,0 +1,40 @@
+{% set items = [
+    {
+        "image": "./images/slide.png", 
+        "text": "Укрепление береговой линии",
+        "link": "#",
+        "button": "Заказать расчет"
+    },
+    {
+        "image": "./images/promo.jpg", 
+        "text": "Укрепление береговой линии",
+        "link": "#",
+        "button": "Заказать расчет1"
+    },
+    {
+        "image": "./images/carousel1.jpg", 
+        "text": "Укрепление береговой линии",
+        "link": "#",
+        "button": "Заказать расчет2"
+    }
+]%}
+
+<div class="carousel">
+    <div class="container carousel__control">
+        <a href="#" class="carousel__arrow carousel__arrow_position_prev"></a>
+        <a href="#" class="carousel__arrow carousel__arrow_position_next"></a>
+    </div>
+    <ul class="carousel__list">
+        {% for item in items %}
+        <li class="carousel__item">
+            <img class="carousel__image" src="{{ item.image }}" alt="" />
+            <div class="container carousel__container">
+                <div class="carousel__info">
+                    <div class="carousel__text">{{ item.text }}</div>
+                    <a href="{{ item.link }}" class="carousel__link">{{ item.button }}</a>
+                </div>
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
+</div>

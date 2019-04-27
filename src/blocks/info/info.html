@@ -1,0 +1,33 @@
+{% set info = [
+    {
+        "type": "experience", 
+        "text": "Более 10 лет опыта"
+    },
+    {
+        "type": "guarantees", 
+        "text": "гарантия до&nbsp;5&nbsp;лет"
+    },
+    {
+        "type": "key", 
+        "text": "Работы «под&nbsp;ключ»"
+    },
+    {
+        "type": "price", 
+        "text": "Справедливые цены"
+    }
+]%}
+
+<div class="info">
+    <div class="container info__container">
+        {% for item in info %}
+            <div class="info__item info__item_type_{{ item.type }}">
+                <div class="info__wrapper">
+                    <div class="info__img">
+                        <img src="./images/{{ item.type }}.png" class="info__image" alt="{{ item.type }}">
+                    </div>
+                    <div class="info__text">{{ item.text }}</div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
