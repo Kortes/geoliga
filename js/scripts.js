@@ -8,4 +8,31 @@ $(document).ready(function() {
 	$(".services__zoom").fancybox();
 
 	$(".services__link").fancybox();
+
+    ymaps.ready(init);
+    var myMap,
+        myPlacemark;
+
+    function init(){     
+        myMap = new ymaps.Map("map", {
+            center: [56.826760999423534,60.58656015951259],
+            zoom: 17,
+            controls: ['zoomControl']
+        });
+
+        myMap.behaviors.disable('scrollZoom'); 
+
+        myPlacemark = new ymaps.Placemark([56.82681982305506,60.59060493070703],
+        {},{
+        	iconLayout: 'default#image',
+            iconImageHref: './images/map.png',
+            // Размеры метки.
+            iconImageSize: [53, 30],
+            // Смещение левого верхнего угла иконки относительно
+            // её "ножки" (точки привязки).
+            iconImageOffset: [-15, -30]
+        });
+
+        myMap.geoObjects.add(myPlacemark);
+    }
 });

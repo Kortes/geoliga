@@ -1,0 +1,21 @@
+@import "../base/vars";
+
+.map{
+	position: relative;
+
+	&__content{
+		position: absolute;
+		top: 50px;
+		left: 50%;
+		background: rgba(255, 255, 255, .8);
+		height: 400px;
+		width: 400px;
+		/*transform: translateX(-100%);*/
+		margin-left: -0.5 * @width;
+	}
+
+	&__map{
+		height: 500px;
+		/*filter: grayscale(100%); */
+	}
+}

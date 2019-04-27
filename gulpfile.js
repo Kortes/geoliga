@@ -31,7 +31,7 @@ var path = {
     watch: { //за изменением каких файлов мы хотим наблюдать
     	pages: 'src/pages/*.html',
         templates: 'src/blocks/**/*.html',
-        js: 'src/js/*.js',
+        js: 'js/*.js',
         style: 'src/blocks/**/*.less',
         img: 'images/*.*',
         fonts: 'fonts/*.*'
