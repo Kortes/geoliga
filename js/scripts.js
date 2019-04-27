@@ -9,6 +9,11 @@ $(document).ready(function() {
 
 	$(".services__link").fancybox();
 
+    $(".header__burger").click(function(e){
+        e.preventDefault();
+        $(".header__left-menu").toggleClass("header__left-menu_active");
+    });
+
     ymaps.ready(init);
     var myMap,
         myPlacemark;
